@@ -1,0 +1,9 @@
+<h1>Home Page</h1>
+<%= @money %>
+<ul>
+  <% @list.each do |v| %>
+    <li><%= v %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'user.index', users_path %>
