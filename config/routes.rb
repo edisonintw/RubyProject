@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :users do
+    collection do
+      post 'login'
+      get 'logout'
+    end
   end
 
 end

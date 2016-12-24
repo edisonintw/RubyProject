@@ -1,1 +1,15 @@
-User.index
+<% if @users.length > 0 %>
+  <% @users.each do |u| %>
+  <div>
+    <%= u.id %> =>
+    <%= u.username %>
+    <%= u.age %>
+    <%= u.account %>
+    <%= u.password %>
+    <%= u.created_at %>
+    <%= u.updated_at %>
+    <%= link_to 'Edit', edit_user_path(u) %>
+    <%= link_to 'Delete', user_path(u), method: :delete, data: {confirm: 'Are you sure?', disable_with: 'Removing'} %>
+  </div>
+  <% end %>
+<% end %>
